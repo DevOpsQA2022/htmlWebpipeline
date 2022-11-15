@@ -16,9 +16,7 @@ pipeline {
                  }
                  }
             }
-        }
-                
-           
+    }    
       stages {
         stage('Deloy') {
             steps {
