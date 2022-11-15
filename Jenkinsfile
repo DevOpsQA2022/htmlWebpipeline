@@ -3,7 +3,6 @@ pipeline {
     tools{
         maven 'local_maven'
     }
-
     stages {
         stage ('Build') {
             steps {
@@ -11,7 +10,7 @@ pipeline {
             }
             post{
                  success{
-                     echo"Archiving the Artifacts"  
+                     echo "Archiving the Artifacts"  
                      archiveArtifacts artifacts: '**/target/*.war'
                  }
                  }
