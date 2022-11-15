@@ -13,8 +13,12 @@ pipeline {
                  success{
                      echo"Archiving the Artifacts"  
                      archiveArtifacts artifacts: '**/target/*.war'
-        }
+                 }
+                 }
             }
+        }
+                
+           
       stages {
         stage('Deloy') {
             steps {
