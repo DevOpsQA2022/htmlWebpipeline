@@ -7,15 +7,15 @@ pipeline {
         stage ('Build') {
             steps {
               echo 'successfully'
-//                 sh 'mvn clean package'                
+                sh 'mvn clean package'                
             }
-//             post{
-//                  success{
-//                      echo "Archiving the Artifacts"
-//                      archiveArtifacts artifacts: '**/target/*.war'
+            post{
+                 success{
+                     echo "Archiving the Artifacts"
+                     archiveArtifacts artifacts: '**/target/*.war'
                     
-//                  }
-//                  }
+                 }
+                 }
             }
    
         stage ('Deloy') {
