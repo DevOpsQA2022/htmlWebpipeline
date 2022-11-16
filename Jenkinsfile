@@ -12,7 +12,7 @@ pipeline {
             post{
                  success{
                      echo "Archiving the Artifacts"
-                     archiveArtifacts artifacts: 'htmlWebpipeline/target/*.war'
+                     archiveArtifacts artifacts: 'htmlWebpipeline/target/htmlWebpipeline.war'
                     
                  }
                  }
