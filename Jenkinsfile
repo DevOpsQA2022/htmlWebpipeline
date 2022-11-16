@@ -1,21 +1,21 @@
 pipeline {
     agent any
-//     tools{
-//         maven 'Maven_Home'
-//     }
+    tools{
+        maven 'Maven_Home'
+    }
     stages {
         stage ('Build') {
             steps {
               echo 'successfully'
-//                 sh 'mvn clean package'                
+                sh 'mvn clean package'                
             }
-//             post{
-//                  success{
-//                      echo "Archiving the Artifacts"
-//                      archiveArtifacts artifacts: 'htmlWebpipeline/target/htmlWebpipeline.war'
+            post{
+                 success{
+                     echo "Archiving the Artifacts"
+                     archiveArtifacts artifacts: 'htmlWebpipeline/target/htmlWebpipeline.war'
                     
-//                  }
-//             }
+                 }
+            }
         }
    
         stage ('Deloy') {
