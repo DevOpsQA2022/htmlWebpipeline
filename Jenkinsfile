@@ -15,6 +15,8 @@ pipeline {
                      archiveArtifacts artifacts: 'htmlWebpipeline/target/htmlWebpipeline.war'
                     
                  }
+                failure{
+                    echo "failure"
                  }
             }
    
